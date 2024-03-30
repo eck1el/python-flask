@@ -36,5 +36,5 @@ if __name__=="__main__":
 
     # Here we instruct SQLAlchemy to create tables for each model in models.py, if it doesn't exist
     db.Base.metadata.create_all(db.engine)
-    app.run(debug=True)#debug=True means that everytime the server is restarted or something is to be modified
+    app.run(host="0.0.0.0", port=5001, debug=True)#debug=True means that everytime the server is restarted or something is to be modified
     #the Flask's server will restart itself
